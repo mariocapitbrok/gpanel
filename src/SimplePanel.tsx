@@ -17,11 +17,14 @@ import {
   Field,
   InlineField,
   Switch,
-  Cascader} from '@grafana/ui';
+  Cascader,
+  Table,
+  } from '@grafana/ui';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
-export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+export const SimplePanel: React.FC<Props> = ({ options, data, width, height}) => {
+
 
   return (
     <React.Fragment>
@@ -125,16 +128,11 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
               <Legend children={undefined}></Legend>
               <h4>Product name</h4>
               <Input className={'width-17'} prefix={<Icon name="search" />} css={undefined} />
-              <InlineLabel className={'width-26'} style={{ background: '#202226' }} >211-BRT-F</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#141619' }} >211-BRT-S</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#202226' }} >211-DATED-S</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#141619' }} >211-WTI-F</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#202226' }} >211-WTI-S</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#141619' }} >321-BRT-F</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#202226' }} >321-BRT-S</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#141619' }} >321-WTI-F</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#202226' }} >321-WTI-S</InlineLabel>
-              <InlineLabel className={'width-26'} style={{ background: '#141619' }} >ALUMINUM</InlineLabel>
+  
+              <div className="panel-container" style={{ width: 'auto' }}>
+                <Table data={data.series[0]} height={350} width={450}  />
+              </div>
+
             </VerticalGroup>
           </div>
 
@@ -147,5 +145,6 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     </React.Fragment>
   );
 };
+
 
 
