@@ -1,0 +1,3 @@
+set GRAFANA_API_KEY=
+eyJrIjoiZndZdGwxQ1BIb2c0ampnMnpjTnB1Rjk4eFFrbFlCODAiLCJuIjoibXl0ZXN0IiwiaWQiOjF9
+npx @grafana/toolkit plugin:sign --rootUrls http://localhost:3000/,http://localhost:3005/

@@ -1,0 +1,3 @@
+set GRAFANA_API_KEY=
+eyJrIjoiSXpJOFlmWmVxckhYa1lPQUE4c2lXYXJONVQ4N3hsQXciLCJuIjoibXl0ZXN0cGx1Z2luIiwiaWQiOjF9
+npx @grafana/toolkit plugin:sign --rootUrls https://capitbrok.grafana.net/
