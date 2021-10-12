@@ -25,12 +25,10 @@ interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height}) => {
 
-
   return (
     <React.Fragment>
       <div className="panel-container" style={{ width: 'auto', borderColor: '#141619' }}>
         <div className="row">
-
 
           <div className="col-sm">
             <br/>
@@ -109,7 +107,6 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height}) =>
             </VerticalGroup>
           </div>
 
-
           <div className="col-sm">
             <br/>
             <h3>Product finder</h3>
@@ -127,15 +124,12 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height}) =>
               </HorizontalGroup>
               <Legend children={undefined}></Legend>
               <h4>Product name</h4>
-              <Input className={'width-17'} prefix={<Icon name="search" />} css={undefined} />
-  
+              <Input className={'width-17'} prefix={<Icon name="search" />} css={undefined} />  
               <div className="panel-container" style={{ width: 'auto' }}>
                 <Table data={data.series[0]} height={350} width={450}  />
               </div>
-
             </VerticalGroup>
           </div>
-
 
         </div>
         <HorizontalGroup spacing={'xs'} justify={'flex-end'} align={'flex-end'}>
